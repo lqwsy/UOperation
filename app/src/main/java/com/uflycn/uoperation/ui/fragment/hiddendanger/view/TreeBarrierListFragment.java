@@ -92,10 +92,11 @@ public class TreeBarrierListFragment extends DemoBaseFragment implements HiddenD
         refreshData();
     }
 
+    //刷新数据
     private void refreshData() {
         //根据任务是否已开启，线路巡视是否已开启，是否已经到位登记来获取数据
         lineId = "all";
-        //我的任务或线路巡视
+        //开启了我的任务或线路巡视
         if (MyApplication.gridlineTaskStatus == 3 || MyApplication.gridlineTaskStatus == 1) {
             if (MyApplication.mLineIdNamePairs != null && MyApplication.mLineIdNamePairs.size() > 0) {
                 lineId = "";
@@ -107,22 +108,13 @@ public class TreeBarrierListFragment extends DemoBaseFragment implements HiddenD
                 lineId = lineId.substring(lineId.indexOf(",") + 1, lineId.length());
             }
         }
-        //开启自动登记，则从最近的塔获取线路ID
-        if (MyApplication.isRegisterAuto) {
-            Log.d("lqwtest","MyApplication.currentNearestTower != null");
-            if (MyApplication.currentNearestTower != null) {
-                Log.d("lqwtest","MyApplication.currentNearestTower != null");
-                lineId = "";
-                towerId = MyApplication.currentNearestTower.getSysTowerID() + "";
-            }
-        } else {
-            //手动登记，则获取登记塔的ID
-            if (MyApplication.registeredTower != null) {
-                Log.d("lqwtest","MyApplication.registeredTower != null");
-                lineId = "";
-                towerId = MyApplication.registeredTower.getSysTowerID() + "";
-            }
+        //已经到位登记，则获取登记塔的ID
+        if (MyApplication.registeredTower != null) {
+            Log.d("lqwtest", "MyApplication.registeredTower != null");
+            lineId = "";
+            towerId = MyApplication.registeredTower.getSysTowerID() + "";
         }
+
         presenter.getTreeBarrierDefectList(lineId, "TreeTask", "0", lineName, towerId);
     }
 
@@ -138,6 +130,7 @@ public class TreeBarrierListFragment extends DemoBaseFragment implements HiddenD
         startActivity(intent);
     }
 
+    //跳转到消缺页面
     private void startSolveActivity(int position) {
         if (treeDefectList == null || treeDefectList.size() <= 0) {
             return;
@@ -156,6 +149,8 @@ public class TreeBarrierListFragment extends DemoBaseFragment implements HiddenD
     public void doClick(View view) {
         switch (view.getId()) {
             case R.id.btn_search_name:
+                lineName = "";
+                towerId = "";
                 //点击搜索
                 String result = etSearchName.getText().toString().trim();
                 if (!StringUtils.isEmptyOrNull(result)) {
@@ -187,6 +182,10 @@ public class TreeBarrierListFragment extends DemoBaseFragment implements HiddenD
         }
         treeDefectList = defectInfo.getTreeDefectPoint();
         if (treeDefectList == null || treeDefectList.size() <= 0) {
+            if(!StringUtils.isEmptyOrNull(towerId)){
+                ToastUtil.show("该杆塔无树障数据！");
+                return;
+            }
             ToastUtil.show("无数据！");
             return;
         }
@@ -200,4 +199,10 @@ public class TreeBarrierListFragment extends DemoBaseFragment implements HiddenD
         ToastUtil.show(msg);
     }
 
+    @Override
+    public void onStart() {
+        Log.d("lqwtest","fragment onstart!");
+        refreshData();
+        super.onStart();
+    }
 }

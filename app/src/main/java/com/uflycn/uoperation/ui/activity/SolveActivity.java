@@ -441,13 +441,9 @@ public class SolveActivity extends Activity {
             mSubmitCall = RetrofitManager.getInstance().getService(ApiService.class).postClearTreeDefect(params, requestImgParts);
         }
 
-        Log.d("lqwtest", "params="+ JSONArray.toJSONString(params));
-        Log.d("lqwtest", "request_img_part=" + new Gson().toJson(requestImgParts));
-
         mSubmitCall.enqueue(new Callback<BaseCallBack<String>>() {
             @Override
             public void onResponse(Call<BaseCallBack<String>> call, Response<BaseCallBack<String>> response) {
-                Log.d("lqwtest", "mSubmitCall response" + new Gson().toJson(response));
                 BaseCallBack<String> body = response.body();
                 if (body == null) {
                     retryPost(params, record);

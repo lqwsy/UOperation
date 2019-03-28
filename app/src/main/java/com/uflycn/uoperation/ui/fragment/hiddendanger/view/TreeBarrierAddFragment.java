@@ -153,16 +153,13 @@ public class TreeBarrierAddFragment extends DemoBaseFragment implements HiddenDa
      */
     private void initLine() {
         if (MyApplication.gridlineTaskStatus == 0) {
-            ToastUtil.show("未开启线路巡视或任务！");
             return;
         }
         if (MyApplication.mLineIdNamePairs == null && MyApplication.mLineIdNamePairs.size() <= 0) {
-            ToastUtil.show("无开启线路！");
             return;
         }
         List<Map.Entry<String, String>> lineList = new ArrayList<>(MyApplication.mLineIdNamePairs.entrySet());
         if (lineList == null && lineList.size() <= 0) {
-            ToastUtil.show("无开启线路！");
             return;
         }
         lineNameList = new ArrayList<>();
