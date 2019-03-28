@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_0"
+    android:orientation="vertical"
+    tools:context=".ui.activity.TourResultActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#00C69A"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_tour_result"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="巡视登记"
+            android:textColor="@color/rb_bottom_text_selector"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_defect_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="清账"
+            android:textColor="@color/rb_bottom_text_selector"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_dis_defect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="消缺"
+            android:textColor="@color/rb_bottom_text_selector"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_break_document"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="外破专档"
+            android:textColor="@color/rb_bottom_text_selector"
+            android:textSize="16sp"/>
+
+
+    </RadioGroup>
+
+</LinearLayout>

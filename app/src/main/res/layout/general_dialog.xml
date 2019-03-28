@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dlg_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4d000000"
+    android:gravity="center"
+    android:paddingLeft="15.0dip"
+    android:paddingRight="15.0dip">
+
+    <LinearLayout
+        android:id="@+id/dlg_linear_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dlg_white_bg_shape"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="27.0dip"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginTop="27.0dip"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dlg_title_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_marginBottom="3.0dip"
+                android:layout_marginTop="3.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="提示"
+                android:textColor="#ff212121"
+                android:textSize="17.0dip" />
+
+            <TextView
+                android:id="@+id/dlg_content_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_marginBottom="3.0dip"
+                android:layout_marginTop="3.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip"
+                android:text="主要内容"
+                android:textColor="#ff212121"
+                android:textSize="14.0dip" />
+            <EditText
+                android:id="@+id/edt_content"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="修改内容"
+                android:visibility="gone"
+                android:background="@drawable/shape_et_bg" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:background="#ffeff1f3" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="42.0dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dlg_btn_left"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@color/transparent"
+                android:text="取消"
+                android:textColor="#ff757575"
+                android:textSize="16.0dip" />
+
+            <View
+                android:id="@+id/dlg_divider"
+                android:layout_width="1.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:background="#ffeff1f3" />
+
+            <Button
+                android:id="@+id/dlg_btn_right"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@color/transparent"
+                android:text="确定"
+                android:textColor="#ff4287ff"
+                android:textSize="16.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

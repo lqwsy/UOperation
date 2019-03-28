@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/top_search_layout">
+    </include>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_hdm_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_hdm_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:layout_margin="@dimen/Margin_5dp"
+            android:divider="@color/black_1"
+            android:dividerHeight="0.3dp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

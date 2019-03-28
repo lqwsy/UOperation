@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/view_padding_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/view_padding_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:text="消缺图片："
+            android:textSize="16sp"/>
+
+        <com.uflycn.uoperation.widget.AddImageGridView
+            android:id="@+id/add_img_defect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:numColumns="3"
+            android:horizontalSpacing="2dp"
+            android:verticalSpacing="2dp"
+            android:columnWidth="50dp"/>
+    </LinearLayout>
+
+    <View style="@style/view_Style"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/view_padding_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/view_padding_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:text="工  作  单："
+            android:textSize="16sp"/>
+
+        <com.uflycn.uoperation.widget.AddImageGridView
+            android:id="@+id/add_img_work"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:numColumns="3"
+            android:horizontalSpacing="2dp"
+            android:verticalSpacing="2dp"
+            android:columnWidth="50dp"/>
+    </LinearLayout>
+
+    <View style="@style/view_Style"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/view_padding_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/view_padding_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:text="补偿协议："
+            android:textSize="16sp"/>
+
+        <com.uflycn.uoperation.widget.AddImageGridView
+            android:id="@+id/add_img_ok"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:numColumns="3"
+            android:horizontalSpacing="2dp"
+            android:verticalSpacing="2dp"
+            android:columnWidth="50dp"/>
+    </LinearLayout>
+
+    <View style="@style/view_Style"/>
+
+</LinearLayout>

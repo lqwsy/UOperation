@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bu_blue_pad7"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/_bar"
+        style="@style/header_linear_layout"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/ImageButton_back"          
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" 
+            android:background="@drawable/btn_back_selector"
+            android:contentDescription="@string/Bluetooth_conmunition"
+            android:scaleType="centerCrop" />  
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="#696969">              
+        </LinearLayout>
+
+        <TextView
+            style="@style/header_text_view"
+            android:layout_marginLeft="20dp"
+            android:text="@string/bluetooth_datalink"
+            android:visibility="visible" />
+        
+        <Button
+            android:id="@+id/button_nema_stop"
+            style="@style/header_button_back"
+            android:text="@string/Stop"
+            android:visibility="invisible" />  
+    </LinearLayout>
+       
+    <ScrollView
+        android:id="@+id/ScrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_black"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="1dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" >
+
+            <!-- Ntrip设置 -->
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Ntrip_setting"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bg_black"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:paddingLeft="10dp"
+                        android:text="@string/ip" />
+
+                    <FrameLayout
+                        android:id="@+id/parent_Ip"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/IP"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp" >
+
+                        <EditText
+                            android:id="@+id/edittext_IP"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="60.205.8.49"
+                            android:background="@drawable/text_selector"
+                            android:digits="1234567890."
+                            android:inputType="numberDecimal"
+                            android:singleLine="true" />
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/btn_select_IP"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right|center"
+                            android:layout_marginRight="5dp"
+                            android:contentDescription="@string/ip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/button_down" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#a9a9a9" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:paddingLeft="10dp"
+                        android:text="@string/port" />
+
+                    <FrameLayout
+                        android:id="@+id/parent_Port"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp" >
+
+                        <EditText
+                            android:text="8002"
+                            android:id="@+id/edittext_Port"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/text_selector"
+                            android:digits="1234567890"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/btn_select_Port"
+                             android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right|center"
+                            android:layout_marginRight="5dp"
+                            android:contentDescription="@string/Port"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/button_down" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#a9a9a9" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" >
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/user"/>
+
+                    <EditText
+                        android:text="qxbdow002"
+                        android:id="@+id/editText_user"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/text_selector"
+                        android:ems="10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#a9a9a9" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" >
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/password" />
+
+                    <EditText
+                        android:text="cd21e48"
+                        android:id="@+id/editText_password"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/text_selector"
+                        android:ems="10" />
+                </LinearLayout>
+            </LinearLayout>
+            
+            <!-- 接入点 -->
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/MountPoint_set"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bg_black"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/AccessPoint" />
+
+                    <FrameLayout
+                        android:id="@+id/parent_AccessPoint"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp" >
+
+                        <EditText
+                            android:id="@+id/edittext_mount"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/text_selector"
+                            android:inputType="none"
+                            android:singleLine="true" />
+
+                        <ImageView
+                            android:id="@+id/btn_select_mount"
+                             android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right|center"
+                            android:contentDescription="@string/AccessPoint"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/button_down" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#a9a9a9" >
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button_getpointlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="@string/Get_MountPoint"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            
+            <!-- 状态    -->
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/State"
+                android:textSize="15sp" />
+                     
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bg_black"
+                android:orientation="vertical" >
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/Access" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar_SetRTK"
+                        style="@style/ProgressBar_Mini"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="40dp" />                   
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#a9a9a9" >
+                </LinearLayout>
+                         
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/textView_state"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>        
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部按钮栏 -->
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_black"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:gravity="center"
+        android:padding="1dip" >
+
+        <Button
+            android:id="@+id/button_start"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/login_button_selector"
+            android:text="@string/Start"/>
+
+        <Button
+            android:id="@+id/button_OK1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/btn_ok"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:background="@drawable/button_set" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

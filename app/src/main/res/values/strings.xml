@@ -1,0 +1,461 @@
+<resources>
+    <string name="map_type_gaode">高德地图</string>
+    <string name="map_type_google">谷歌地图</string>
+    <string name="inspection_result">巡检结果</string>
+    <string name="app_name">运维管理</string>
+    <string name="my_tour">我的巡视</string>
+    <string name="document">输电手册</string>
+    <string name="plan_task">计划任务</string>
+    <string name="temp_task">临时通知</string>
+    <string name="system_setting">系统设置</string>
+    <string name="line_name">线路名称：</string>
+    <string name="VoltageClass">电压等级：</string>
+    <string name="register_defect">缺陷登记</string>
+    <string name="break_list_frag">专档列表</string>
+    <string name="break_create_frag">外破建档</string>
+    <string name="break_inspection_record_frag">特巡记录</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="copyright">版权所有</string>
+    <string name="company_name">广州优飞信息科技有限公司</string>
+    <string name="tel_support">技术交流</string>
+    <string name="website">官方网址</string>
+
+    <string name="clear_cache_tip_title">清除缓存提示</string>
+    <string name="clear_cache_tip">您确认要清除地图缓存吗?</string>
+    <string name="sure">确定</string>
+    <string name="cancle">取消</string>
+    <string name="clear_cache_success">清除缓存成功</string>
+    <string name="clear_cache_successful">缓存已成功清除</string>
+    <string name="update_check">版本更新</string>
+    <string name="check_update">检查更新</string>
+    <string name="Broken_Document_No">专档编号:</string>
+    <string name="broken_record_date">特巡日期:</string>
+    <string name="broken_state">状态:</string>
+    <string name="broken_remark">描述:</string>
+    <string name="tip_start_line_first">请先开启线路</string>
+    <string name="tip_regiter_location">请先到位登记</string>
+    <string name="tip_shot_photo">请先拍照</string>
+    <string name="tip_no_picture">未获取到图片</string>
+    <string name="tip_no_net">网络错误</string>
+    <string name="tip_input_remark">请填写备注</string>
+    <string name="tip_far_awayfrom_tower">没有到位登记或者已远离到位登记的塔，请重新登记</string>
+    <string name="tip_take_pic_first">无缺陷图片，请先拍照</string>
+    <string name="tip_get_list_err">获取列表失败</string>
+
+    <string name="click_to_login">点击登录</string>
+
+    <string-array name="operators">
+        <item>移动2G/GSM</item>
+        <item>联通2G/GSM</item>
+        <item>电信/CDMA</item>
+        <item>联通3G/WCDMA</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="connectMode">
+        <item>蓝牙</item>
+        <item>WIFI</item>
+    </string-array>
+
+    <string name="disposing">处理中</string>
+    <string name="Note">Note</string>
+    <string name="double_click_finish">双击关闭程序！</string>
+    <string name="Now_Device">当前连接设备:</string>
+    <string name="btDeviceList">蓝牙设备列表:</string>
+    <string name="connect">连接</string>
+    <string name="disconnect">断开</string>
+    <string name="back">退出</string>
+    <string name="Diff_set_mode">差分模式</string>
+    <string name="close">关闭</string>
+    <string name="Device_Name">设备名称</string>
+    <string name="Mac_Address">Mac地址</string>
+    <string name="Bluetooth_conmunition">蓝牙通信</string>
+    <string name="PortDebug">串口调试</string>
+    <string name="jingdu">进度：</string>
+    <string name="zhuangtai">状态</string>
+    <string name="Record_Data">接收数据:</string>
+    <string name="Send_Data">发送</string>
+    <string name="Input_Send_Data">请输出发送指令</string>
+    <string name="order">指令:</string>
+    <string name="Sbas_chafen">SBAS差分</string>
+    <string name="Rover_network_set">内部差分</string>
+    <string name="connect_pattern">连接模式</string>
+    <string name="connect_options">连接选项</string>
+    <!-- <string name="boot_to_connect">开机自动连接网络:</string> -->
+    <string name="APN_set">APN设置</string>
+    <string name="CORS_set">CORS设置</string>
+    <string name="ggafrequency">GGA上传间隔(s):</string>
+    <string name="operator">运营商：</string>
+    <string name="name">名称:</string>
+    <string name="user">用户:</string>
+    <string name="password">密码:</string>
+    <string name="choose_the_operators">选择运营商</string>
+    <string name="ip">IP:</string>
+    <string name="port">端口:</string>
+    <string name="IP">IP</string>
+    <string name="choose_the_ip">选择IP</string>
+    <string name="Port">端口</string>
+    <string name="btn_ok">确定</string>
+    <string name="btn_cancel">取消</string>
+    <string name="MountPoint_set">接入点设置</string>
+    <string name="Get_MountPoint">获取接入点</string>
+
+    <string name="CORS_User">CORS账户</string>
+
+    <string name="AccessPoint">接入点:</string>
+
+    <string name="bluetooth_datalink">外部差分</string>
+    <string name="Ntrip_setting">Ntrip设置</string>
+    <string name="Access">接收:</string>
+    <string name="State">状态</string>
+    <string name="gps_state_detail">详细</string>
+    <string name="gps_state_base">基站</string>
+    <string name="gps_state_sate_view">星图</string>
+    <string name="gps_state_sate_table">星表</string>
+    <string name="gps_state_sate_barchart">星历</string>
+    <string name="gps_state_sate_info">卫星信息</string>
+    <string name="gps_salite_number">卫星号</string>
+    <string name="gps_salite_l1">L1/B1</string>
+    <string name="gps_salite_l2">L2/B2</string>
+    <string name="gps_salite_l5">L5/B3</string>
+    <string name="gps_salite_fangweijiao">方位角</string>
+    <string name="gps_salite_gaodujiao">高度角</string>
+    <string name="HRMS">HRMS:</string>
+    <string name="Speed">速度:</string>
+    <string name="fangxiang">方向:</string>
+    <string name="state">解状态:</string>
+    <string name="salitenumber">卫星数:</string>
+    <string name="diffdelay">差分延迟:</string>
+    <string name="PDOP">PDOP:</string>
+    <string name="HDOP">HDOP:</string>
+    <string name="VDOP">VDOP:</string>
+    <string name="VRMS">VRMS:</string>
+    <string name="Point_B">B:</string>
+    <string name="Point_L">L:</string>
+    <string name="Point_H">H:</string>
+    <string name="distance">基站距离:</string>
+    <string name="baseID">基站ID:</string>
+    <string name="fangweijiao">方位角:</string>
+    <string name="location_Manage">位置服务管理器</string>
+    <string name="Gps_Data">数据</string>
+
+    <string name="Set_Set">设置</string>
+    <string name="Gps_Data_Set">GPS数据</string>
+    <string name="Connect_Mode">连接方式:</string>
+    <string name="Gps_Info">GPS信息</string>
+    <string name="Gps_Info_xinzhaobi">信噪比</string>
+    <string name="Wifi_Add">192.168.10.1</string>
+    <string name="select_bluetooth">搜索</string>
+    <string name="Lock">锁定</string>
+    <string name="visible">可见</string>
+    <string name="utcDate">UTC时间:</string>
+
+    <string name="find">搜索中…</string>
+
+    <string name="point_info">定位信息</string>
+    <string name="Base_info">基站信息</string>
+    <string name="Other_info">其他信息</string>
+
+    <string name="point_info1">定位信息(未模拟位置)</string>
+    <string name="Base_info1">基站信息(未模拟位置)</string>
+    <string name="Other_info1">其他信息(未模拟位置)</string>
+
+    <string name="Is_automatic_connection_please_wait">正在自动连接通信,请稍候…</string>
+    <string name="Please_select_allowing_the_simulated_position">请勾选,允许模拟位置！</string>
+
+    <string name="prompt">提示</string>
+    <string name="finish_program">确定退出软件？</string>
+    <string name="WIFI_Connect_seccess">WIFI连接成功!</string>
+    <string name="WIFI_Connect_fail">WIFI连接失败!</string>
+
+    <string name="Connect_fail">连接失败</string>
+    <string name="Connect_success">连接成功</string>
+
+    <string name="WIFI_Connect_close">WIFI连接已断开!</string>
+    <string name="Bluetooth_Connect_error">蓝牙连接失败,请检查蓝牙设备是否已连接!</string>
+    <string name="Bluetooth_Connect_Aoto">自动连接蓝牙，请稍候…</string>
+    <string name="The_user_name_or_password_mistake">用户名或密码错误</string>
+    <string name="The_mountpoint_does_not_exist">挂载点不存在</string>
+    <string name="connection_exception">连接异常</string>
+    <string name="Access_to_mountpoint">获取接入点完毕！</string>
+    <string name="Get_mountpoint_fail">获取接入点失败,请检查网络是否开启！</string>
+    <string name="Rover_network_set_seccess">内部差分设置成功!</string>
+    <string name="Update_Mountpoint">更新接入点</string>
+    <string name="please_Get_Mountpoint_first">请先获取接入点</string>
+    <string name="Get_Mountpoint_success">获取接入点成功</string>
+    <string name="Access_to_Mountpoint_timeout">获取接入点超时</string>
+    <string name="Mountpoint_does_not_exist">接入点不存在</string>
+    <string name="Receive_data_timeout">接收数据超时,30s后重连</string>
+    <string name="The_mountpoint_is_empty">挂载点为空</string>
+    <string name="Data_is_empty">数据为空</string>
+    <string name="socket_Abnormal_disconnect">socket异常断开</string>
+    <string name="Reconnection_failure"> 重连失败,30s后重连</string>
+    <string name="Bluetooth_datalink_set_seccess">外部差分设置成功!</string>
+    <string name="SBAS_set_seccess">SBAS差分设置成功!</string>
+    <string name="jixu">继续</string>
+    <string name="Communication_not_connected">通信未连接</string>
+
+    <string name="None_state">无效解</string>
+    <string name="SINGLE_state">单点解</string>
+    <string name="DIF3D_state">差分3D</string>
+    <string name="FIXED_state">固定解</string>
+    <string name="FLOAT_state">浮点解</string>
+    <string name="BASE_state">基站</string>
+
+    <string name="WIFI_Start_Fail">WIFI自启失败，请检查WIFI连接！</string>
+
+    <string name="Pause">暂停</string>
+    <string name="Start">开始</string>
+    <string name="Save">保存</string>
+    <string name="Stop">停止</string>
+    <string name="Clear">清空</string>
+
+    <string name="WIFI_Mode_Set">WIFI模式设置</string>
+    <string name="WIFI_Mode">WIFI连接模式:</string>
+    <string name="WIFI_Master">Master</string>
+    <string name="WIFI_Client">Client</string>
+    <string name="WIFI_SSID">WIFI热点:</string>
+    <string name="WIFI_Mode_Shuoming">  说明:如果设置模式为Master,则热点名称和密码都为空;否则需要选择设置连接的热点名称和密码！</string>
+
+    <string name="WIFI_Mode_Set_Info">  WIFI连接模式,禁止设置WIFI热点模式切换！ </string>
+
+    <string name="Diff_set">差分设置</string>
+    <string name="Remote_Update">远程回传设置</string>
+    <string name="Get_Scanlist">获取列表中…</string>
+
+    <string name="Remote_IP">回传IP:</string>
+    <string name="Remote_Port">回传端口:</string>
+    <string name="Remote_jiange">回传间隔:</string>
+    <string name="Remote_Shuoming">   说明: 根据数据回传间隔值来判断是否数据回传，0表示不会回传,其他为上传间隔!</string>
+
+    <string name="UpdatData_Success">远程数据回传设置成功！</string>
+    <string name="WIFI_Mode_Is_Null">热点列表为空,请重新获取热点列表！</string>
+
+    <string name="WIFI_Mode_Set_Success">仪器WIFI模式设置成功！</string>
+    <string name="WIFI_Mode_Get_List">获取热点列表</string>
+
+    <string name="IsPhoneNetwork">是否手机网络获取:</string>
+    <string name="Get_MountPoint_RTK">获取接入点(RTK网络)</string>
+    <string name="getlist">获取接入点.....</string>
+
+    <string name="login_successed">登录成功！</string>
+    <string name="login_failed">登录信息验证失败</string>
+
+    <string name="SYS_INCORRECT_COMMAND">错误命令</string>
+    <string name="SYS_INCORRECT_PATH">路径节点不存在</string>
+    <string name="SYS_UNSUPPORT_COMMAND">路径节点不支持该命令</string>
+    <string name="SYS_UNSUPPORTED_COMMAND_IN_CURRENT_MODE">当前模式不支持该命令</string>
+    <string name="SYS_INCORRECT_PARAM">参数错误</string>
+    <string name="SYS_COMMAND_FAILED">命令执行失败</string>
+    <string name="SYS_PRE_COMMMAND_PROCESSING">上一条命令正在处理</string>
+    <string name="SYS_UNSUPPORTED_COMMAND_IN_THIS_MODEL">当前模式不支持的命令</string>
+    <string name="SYS_DISK_INIT_ERROR">磁盘无法初始化</string>
+    <string name="SYS_OEM_INIT_ERROR">主板无法初始化</string>
+    <string name="SYS_RADIO_INIT_ERROR">电台无法初始化</string>
+    <string name="SYS_GPRS_INIT_ERROR">网络模块无法初始化</string>
+    <string name="SYS_REGISTRATION_CODE_ERROR">注册码错误</string>
+    <string name="SYS_REGISTRATION_CODE_EXPIRED">注册码过期</string>
+    <string name="SYS_RECORDING_CANNOT_START">无法启动记录</string>
+    <string name="SYS_SATELLITE_NOT_MEET">卫星状态未达到数据记录要求</string>
+    <string name="SYS_NO_RECORD_CANNOT_STOP">当前无记录数据，无法停止</string>
+    <string name="SYS_OEM_CMD_OVERFLOW">待处理命令太多</string>
+
+    <string name="SYS_FS_DISK_ERROR">磁盘错误</string>
+    <string name="SYS_FS_INTI_ERROR">初始化失败</string>
+    <string name="SYS_FS_NOT_READY">未准备好</string>
+    <string name="SYS_FS_NO_FILE">文件不存在</string>
+    <string name="SYS_FS_NO_PATH">路径不存在</string>
+    <string name="SYS_FS_INVALID_NAME">无效的名称</string>
+    <string name="SYS_FS_DENIED">操作被拒绝</string>
+    <string name="SYS_FS_EXIST">文件已经存在</string>
+    <string name="SYS_FS_INVALID_OBJECT">无效的文件</string>
+    <string name="SYS_FS_WRITE_PROTECTED">写保护</string>
+    <string name="SYS_FS_INVALID_DRIVE">无效设备</string>
+    <string name="SYS_FS_NOT_ENABLED">未激活</string>
+    <string name="SYS_FS_NO_FILESYSTEM">没有文件系统</string>
+    <string name="SYS_FS_MKFS_ABORTED">格式化被中断</string>
+    <string name="SYS_FS_TIMEOUT">超时</string>
+    <string name="SYS_FS_LOCKED">已锁定</string>
+    <string name="SYS_FS_NOT_ENOUGH_CORE">空间不够</string>
+    <string name="SYS_FS_TOO_MANY_OPEN_FILES">打开文件太多</string>
+
+    <string name="SYS_RADIO_OK">电台正常</string>
+    <string name="SYS_RADIO_NOT_SUPPORTED">不支持的电台型号</string>
+    <string name="SYS_RADIO_INT_ERROR">电台初始化失败</string>
+    <string name="SYS_RADIO_NOT_READY">电台未准备好</string>
+    <string name="SYS_RADIO_COMMAND_PENDING">命令正在处理</string>
+    <string name="SYS_RADIO_COMMAND_TIMEOUT">命令超时</string>
+    <string name="SYS_RADIO_COMMAND_ERROR">命令操作错误</string>
+    <string name="SYS_RADIO_UNKNOW_COMMAND">未知命令</string>
+    <string name="SYS_RADIO_FIFO_OVERFLOW">缓冲已满</string>
+    <string name="SYS_RADIO_TX_ERROR">发送错误</string>
+    <string name="SYS_RADIO_TASK_ERROR">任务错误</string>
+    <string name="SYS_RADIO_FREQ_OUT_OF_RANGE">频率超过范围</string>
+    <string name="SYS_RADIO_VERIFY_ERROR">数据校验错误</string>
+
+    <string name="SYS_GPRS_OK">网络正常</string>
+    <string name="SYS_GPRS_INT_ERR">模块初始化失败</string>
+    <string name="SYS_GPRS_NOT_READY">GPRS未准备好</string>
+    <string name="SYS_GPRS_SIM_NOT_READY">无SIM卡或SIM错误</string>
+    <string name="SYS_GPRS_NETWORK_ERROR">GPRS网络错误</string>
+    <string name="SYS_GPRS_REGISTER_ERROR">GPRS注册失败</string>
+    <string name="SYS_GPRS_COMMAND_PENDING">命令正在处理</string>
+    <string name="SYS_GPRS_COMMAND_ERROR">命令操作错误</string>
+    <string name="SYS_GPRS_UNKNOW_COMMAND">未知命令</string>
+    <string name="SYS_GPRS_CONNECTING">正在连接服务器</string>
+    <string name="SYS_GPRS_CONNECT_ERROR">连接服务器错误</string>
+    <string name="SYS_GPRS_CONNECT_TIMEOUT">连接服务器超时</string>
+    <string name="SYS_GPRS_WRITE_ERROR">发送数据失败</string>
+    <string name="SYS_GPRS_NET_NOT_READY">GPRS网络未准备好</string>
+    <string name="SYS_GPRS_SMS_ERROR">SMS错误</string>
+    <string name="SYS_GPRS_SETMODE_FAIL">设置模式失败</string>
+    <string name="SYS_GPRS_SETMODE_ERR">设置模式错误</string>
+    <string name="SYS_GPRS_NO_MOUNTPOINTLIST">无挂载点列表</string>
+    <string name="SYS_GPRS_CONNECTED">连接上服务器</string>
+    <string name="SYS_GPRS_RECONNECT">重连服务器</string>
+    <string name="SYS_GPRS_NTRIP_UNAUTHORIZED">Ntrip用户名或密码错误</string>
+    <string name="SYS_GPRS_MOUNTPOINT_UNACCEPTED">接入点错误</string>
+    <string name="SYS_GPRS_NETWORK_ROAMING_FORBID">网络不允许漫游</string>
+    <string name="SYS_GPRS_BUSY">模块忙</string>
+
+    <string name="SYS_GPRS_STAT_INIT">模块在初始化</string>
+    <string name="SYS_GPRS_STAT_READY">网络已准备好</string>
+    <string name="SYS_GPRS_STAT_INITFAIL">模块初始化失败</string>
+    <string name="SYS_GPRS_STAT_CONNECT">正在连接服务器</string>
+    <string name="SYS_GPRS_STAT_CONNECTFAIL">连接服务器失败</string>
+    <string name="SYS_GPRS_STAT_CONNECTED">连上服务器</string>
+    <string name="SYS_GPRS_STAT_PROTOCOLFAIL">设置(Ntrip)协议失败</string>
+    <string name="SYS_GPRS_STAT_TRANSFER">正在传输数据</string>
+    <string name="SYS_GPRS_POWEROFF">模块关闭</string>
+
+    <string name="SYS_STATIC_NOT_REC">静态未记录</string>
+    <string name="SYS_STATIC_IN_REC">记录中</string>
+    <string name="SYS_STATIC_PENDING_REC">等待启动记录</string>
+    <string name="SYS_DYNAMIC_NOT_REC">动态未记录</string>
+    <string name="SYS_DYNAMIC_IN_REC">动态记录中</string>
+    <string name="SYS_DYNAMIC_PENDING_REC">等待启动动态记录</string>
+    <string name="SYS_STATIC_RECORD_ERROR">静态记录错误</string>
+    <string name="SYS_NEED_FOR_UPGRADE">主板需要升级到10Hz/20Hz</string>
+    <string name="SYS_STATIC_FAIL_PDOP">PDOP未达到设置条件</string>
+    <string name="SYS_STATIC_FILENAME_ERR">静态文件名错误</string>
+
+    <string name="SYS_BASE_PENDING">等待启动基站</string>
+    <string name="SYS_BASE_TANSMIT">基站已启动</string>
+    <string name="SYS_BASE_STOP">基站已停止</string>
+    <string name="SYS_ROVER_SINGLE">移动站单点</string>
+    <string name="SYS_ROVER_FIX">移动站已固定</string>
+    <string name="SYS_BASE_FAIL_PDOP">等待启动PDOP未达到设定值</string>
+
+    <string name="SYS_OS_TIMEOUT">OS超时</string>
+    <string name="SYS_OS_MAILBOX_FULL">邮箱已满</string>
+    <string name="SYS_OS_QUEUE_FULL">队列已满</string>
+    <string name="SYS_OS_QUEUE_EMPTY">队列为空</string>
+    <string name="SYS_OS_MEMORY_FULL">OS内存已满</string>
+    <string name="SYS_OS_ERR_TIMEOUT">操作超时</string>
+
+    <string name="Set_WIFI_Password">设置WIFI调试密码</string>
+    <string name="Set_Data_Output_List">设置数据输出列表</string>
+    <string name="Set_Data_Output">设置数据输出</string>
+    <string name="Set_SNR_Output">设置信噪比输出</string>
+    <string name="Set_Base_Output">设置基站信息输出</string>
+    <string name="Set_BestPosa_Output">设置定位状态输出</string>
+    <string name="Set_Getall_Output">读取仪器信息</string>
+    <string name="Set_Static_Mode_Output">设置静态模式</string>
+    <string name="Set_Height_jiezhi">设置高度截止角</string>
+    <string name="Set_PDOP_Lim">设置限制PDOP</string>
+    <string name="Set_Point_Name">设置点名</string>
+    <string name="Set_Ant_Height">设置天线高</string>
+    <string name="Set_Ant_Measure">设置天线测量高度</string>
+    <string name="Set_Record_Interval">设置记录间隔</string>
+    <string name="Set_Auto_Rec">设置自动记录模式</string>
+    <string name="Set_Start_Rec">开始记录数据</string>
+
+    <string name="Set_Base_Mode">设置基站模式</string>
+    <string name="Set_Base_SINGLE_Mode">设置单点设站模式</string>
+    <string name="Set_Base_REPEAT_Mode">设置重复设站模式</string>
+    <string name="Set_Base_Delay_Start">设置基站延迟时间</string>
+    <string name="Set_Base_ID">设置基站ID</string>
+    <string name="Set_Base_Auto_Start">设置自动启动模式</string>
+    <string name="Set_Base_Start">启动基站</string>
+
+    <string name="Set_Rover_Mode">设置移动站模式</string>
+
+    <string name="Set_Diff_Mode">设置差分类型</string>
+    <string name="Set_Record_Raw">设置记录原始数据模式</string>
+
+    <string name="Set_Cur_DataLink">设置当前数据链模式</string>
+    <string name="Set_Cur_DataLink_UHF">设置当前数据链为UHF</string>
+    <string name="Set_Radio_Frequency">设置电台频率</string>
+    <string name="Set_Radio_MODE">设置电台协议</string>
+
+    <string name="Set_Radio_Channel_Spacing">设置电台发送间隔</string>
+    <string name="Set_Radio_Power">设置电台功率模式</string>
+    <string name="Set_Radio_Channel">设置电台通道号</string>
+
+    <string name="Set_Cur_DataLink_Network">设置当前数据链为网络模式</string>
+    <string name="Set_Disconnect_Network">断开网络</string>
+    <string name="Set_Network_Mode">设置网络模式</string>
+    <string name="Set_Cors_Address">设置CORS地址</string>
+    <string name="Set_Cors_Port">设置CORS端口</string>
+    <string name="Set_Cors_MountPoint">设置CORS接入点</string>
+    <string name="Set_Cors_User">设置CORS用户密码</string>
+    <string name="Set_Cors_Group">设置分组号</string>
+    <string name="Set_Cors_Group_small">设置小组号</string>
+    <string name="Set_Upload_GGA_Interval">设置上发GGA间隔</string>
+    <string name="Set_Auto_Connect">设置自动连接模式</string>
+    <string name="Set_ReConnect_Network">开始连接网络</string>
+    <string name="Set_APN_Name">设置APN名称</string>
+    <string name="Set_APN_User">设置APN用户</string>
+    <string name="Set_APN_Password">设置APN密码</string>
+    <string name="Set_Network_Reset">重新初始化</string>
+    <string name="Set_Cur_DataLink_Ext">设置当前数据链为外接模式</string>
+    <string name="Set_Ext_Band">设置外接串口波特率</string>
+    <string name="Set_Cur_DataLink_Blue">设置当前数据链为蓝牙模式</string>
+    <string name="Set_Cur_DataLink_DUAL">设置当前数据链为双发模式</string>
+    <string name="Set_Start_Get_MountPoint">开始获取接入点</string>
+
+    <string name="Set_Used_Gps">设置GPS使用模式</string>
+    <string name="Set_Used_Glonass">设置Glonass使用模式</string>
+    <string name="Set_Used_SBAS">设置SBAS使用模式</string>
+    <string name="Set_Used_BeiDou">设置GPS使用模式</string>
+    <string name="Set_Used_LBAND">设置L-band使用模式</string>
+
+    <string name="Set_Fixed_Life">设置星链续航</string>
+
+    <string name="Set_SBAS_Diff_Mode">设置SBAS差分模式</string>
+    <string name="Set_WIFI_SName">设置WIFI热点名称</string>
+    <string name="Set_WIFI_SPassword">设置WIFI热点密码</string>
+    <string name="Set_WIFI_Mode">设置WIFI模式</string>
+    <string name="Get_WIFI_Scanlist">获取WIFI热点列表</string>
+
+    <string name="Set_GGA_Remote_Address">设置GGA回传地址</string>
+    <string name="Set_GGA_Remote_Port">设置GGA回传端口</string>
+    <string name="Get_GGA_Remote_Upload">获取数据回传间隔</string>
+    <string name="Get_GGA_Remote_Address">获取回传地址</string>
+    <string name="Get_GGA_Remote_Port">获取回传端口</string>
+    <string name="Tcp_Local_Ip">Local IP address:</string>
+    <string name="GeoIdal_File_Activity">大地水准文件</string>
+
+    <string name="Set_NetWork_Relay">设置网络中继</string>
+
+    <string name="Connecting">蓝牙连接中…</string>
+    <string name="Is_connect_last_device">是否连接上一台通信的仪器？</string>
+    <string name="MountPoint_Is_None_Please_check">接入方式为空,请检查！</string>
+
+    <string name="point_get_failed_info">接入点获取失败！</string>
+    <string name="getlist_successed">获取接入点完毕！</string>
+    <string name="btn_hide">隐藏</string>
+
+    <string name="Device_Init_Settings">仪器初始化设置…</string>
+    <string name="day_plan">每日计划</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="line_list">线路列表</string>
+    <string name="my_mission">我的任务</string>
+    <string name="defect_manage">缺陷管理</string>
+</resources>

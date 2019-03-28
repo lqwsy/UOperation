@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_task_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="任务标题"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_task_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:text="任务信息"
+            />
+
+        <TableLayout
+            android:id="@+id/tl_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Margin_5dp"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:padding="3dip"
+                    android:text="电压等级"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:padding="3dip"
+                    android:text="线路名称"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_gravity="right"
+                    android:padding="3dip"
+                    android:text="起止杆塔"
+                    android:textStyle="bold"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

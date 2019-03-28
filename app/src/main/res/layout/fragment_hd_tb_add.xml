@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_tb_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/Margin_5dp"
+                android:text="新建树障"
+                android:textColor="@color/black_1"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black_10" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_tb_line_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/Margin_5dp"
+                    android:text="线路名称："
+                    android:textColor="@color/black_1"
+                    android:textSize="17sp" />
+
+                <Spinner
+                    android:id="@+id/sp_tb_line_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_tb_line_name">
+                </Spinner>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_tb_tower_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/Margin_5dp"
+                        android:text="起始杆塔："
+                        android:textColor="@color/black_1"
+                        android:textSize="17sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_tb_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_tb_tower_from">
+
+                    </Spinner>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_tb_tower_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/Margin_5dp"
+                        android:text="终止杆塔："
+                        android:textColor="@color/black_1"
+                        android:textSize="17sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_tb_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_tb_tower_to">
+
+                    </Spinner>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_tb_small_tower_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/Margin_5dp"
+                    android:text="距离小号侧塔距离(米)："
+                    android:textColor="@color/black_1"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/et_tb_small_tower_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/Margin_5dp"
+                    android:layout_marginRight="@dimen/Margin_5dp"
+                    android:layout_marginTop="@dimen/Margin_5dp"
+                    android:textSize="17sp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:layout_toRightOf="@id/tv_tb_small_tower_distance"
+                    android:background="@drawable/shape_et_bg"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_tb_tree_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="39sp"
+                        android:text="树种："
+                        android:textColor="@color/black_1"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/et_tb_tree_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/Margin_5dp"
+                        android:layout_marginRight="@dimen/Margin_5dp"
+                        android:layout_marginTop="@dimen/Margin_5dp"
+                        android:layout_toRightOf="@id/tv_tb_tree_type"
+                        android:background="@drawable/shape_et_bg"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textSize="17sp"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_tb_tree_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="39sp"
+                        android:text="数量："
+                        android:textColor="@color/black_1"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/et_tb_tree_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/Margin_5dp"
+                        android:layout_marginRight="@dimen/Margin_5dp"
+                        android:layout_marginTop="@dimen/Margin_5dp"
+                        android:layout_toRightOf="@id/tv_tb_tree_num"
+                        android:background="@drawable/shape_et_bg"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textSize="17sp"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_tb_temperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="39sp"
+                        android:text="温度："
+                        android:textColor="@color/black_1"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/et_tb_temperature"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/Margin_5dp"
+                        android:layout_marginRight="@dimen/Margin_5dp"
+                        android:layout_marginTop="@dimen/Margin_5dp"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textSize="17sp"
+                        android:layout_toRightOf="@id/tv_tb_temperature"
+                        android:background="@drawable/shape_et_bg"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_tb_clearance_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/Margin_5dp"
+                        android:text="净空距离："
+                        android:textColor="@color/black_1"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/et_tb_clearance_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/Margin_5dp"
+                        android:layout_marginRight="@dimen/Margin_5dp"
+                        android:layout_marginTop="@dimen/Margin_5dp"
+                        android:layout_toRightOf="@id/tv_tb_clearance_distance"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textSize="17sp"
+                        android:background="@drawable/shape_et_bg"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_tb_vertical_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/Margin_5dp"
+                        android:text="垂直距离："
+                        android:textColor="@color/black_1"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/et_tb_vertical_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/Margin_5dp"
+                        android:layout_marginRight="@dimen/Margin_5dp"
+                        android:layout_marginTop="@dimen/Margin_5dp"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textSize="17sp"
+                        android:layout_toRightOf="@id/tv_tb_vertical_distance"
+                        android:background="@drawable/shape_et_bg"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_tb_horizontal_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/Margin_5dp"
+                        android:text="水平距离："
+                        android:textColor="@color/black_1"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/et_tb_horizontal_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/Margin_5dp"
+                        android:layout_marginRight="@dimen/Margin_5dp"
+                        android:layout_marginTop="@dimen/Margin_5dp"
+                        android:textSize="17sp"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:layout_toRightOf="@id/tv_tb_horizontal_distance"
+                        android:background="@drawable/shape_et_bg"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_tb_describe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/Margin_5dp"
+                    android:text="树障描述："
+                    android:textColor="@color/black_1"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/et_tb_describe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/Margin_5dp"
+                    android:layout_marginRight="@dimen/Margin_5dp"
+                    android:layout_marginTop="@dimen/Margin_5dp"
+                    android:layout_toRightOf="@id/tv_tb_describe"
+                    android:background="@drawable/shape_et_bg"
+                    android:gravity="top"
+                    android:enabled="false"
+                    android:minLines="3"
+                    android:textSize="17sp"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_tb_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="39sp"
+                    android:text="图片："
+                    android:textColor="@color/black_1"
+                    android:textSize="17sp" />
+
+                <com.uflycn.uoperation.widget.AddImageGridView
+                    android:id="@+id/aigv_tb_add_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/tv_tb_img"
+                    android:columnWidth="50dp"
+                    android:horizontalSpacing="2dp"
+                    android:numColumns="3"
+                    android:padding="8dp"
+                    android:verticalSpacing="2dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btn_tb_commit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/stop_patrol"
+            android:text="添加"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+</LinearLayout>

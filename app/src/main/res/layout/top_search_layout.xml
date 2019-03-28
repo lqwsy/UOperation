@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/Margin_5dp">
+
+    <Button
+        android:id="@+id/btn_search_name"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_btn_sure_bg"
+        android:padding="0dp"
+        android:text="搜索"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:id="@+id/et_search_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/Margin_5dp"
+        android:layout_toLeftOf="@id/btn_search_name"
+        android:layout_toStartOf="@id/btn_search_name"
+        android:background="@drawable/shape_et_bg"
+        android:hint="输入线路名/杆塔号关键词检索"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:textColor="@android:color/black" />
+</RelativeLayout>

@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="线路名称："/>
+
+            <TextView
+                android:id="@+id/tv_line_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="天明总线"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="3dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="杆塔号："/>
+
+            <TextView
+                android:id="@+id/tv_tower_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="1"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="3dp"
+            />
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_tower_head"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:padding="5dp">-->
+
+        <TextView
+            style="@style/my_tv_style"
+            android:text="杆塔头"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_tower_head"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="图片："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_tower_head"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"
+                tools:listitem="@layout/item_published_grida"/>
+
+        </LinearLayout>
+
+        <!--</LinearLayout>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="3dp"
+            />
+
+
+        <TextView
+            style="@style/my_tv_style"
+            android:text="杆号牌"/>
+
+        <LinearLayout
+            android:id="@+id/ll_tower_no"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="图片："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_tower_no"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"/>
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_is_same"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是否一致："/>
+
+            <RadioButton
+                android:id="@+id/rb_same"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="是"/>
+
+            <RadioButton
+                android:id="@+id/rb_no_same"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="否"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地形："
+                />
+
+            <Spinner
+                android:id="@+id/sp_terrain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="100dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/my_tv_style"
+            android:text="接地引下线"/>
+
+        <LinearLayout
+            android:id="@+id/ll_down_conductor_1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="1："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_down_conductor_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_down_conductor_2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="2："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_down_conductor_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_down_conductor_3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="3："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_down_conductor_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_down_conductor_4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="4："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_down_conductor_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="缺陷等级："
+                />
+
+            <Spinner
+                android:id="@+id/sp_defect_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="100dp"/>
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_is_antiseptic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是否防腐："/>
+
+            <RadioButton
+                android:id="@+id/rb_antiseptic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="是"/>
+
+            <RadioButton
+                android:id="@+id/rb_no_antiseptic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="否"/>
+        </RadioGroup>
+
+        <TextView
+            style="@style/my_tv_style"
+            android:text="拉线.拉棒"/>
+
+        <LinearLayout
+            android:id="@+id/ll_pull_pull_rods_1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="1："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_pull_pull_rods_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pull_pull_rods_2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="2："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_pull_pull_rods_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pull_pull_rods_3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="3："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_pull_pull_rods_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pull_pull_rods_4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="4："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_pull_pull_rods_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pull_pull_rods_5"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="5："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_pull_pull_rods_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pull_pull_rods_6"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="6："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_pull_pull_rods_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pull_pull_rods_7"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="7："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_pull_pull_rods_7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pull_pull_rods_8"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:text="8："
+                />
+
+            <com.uflycn.uoperation.widget.AddImageGridView
+                android:id="@+id/atv_pull_pull_rods_8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="缺陷等级："
+                />
+
+            <Spinner
+                android:id="@+id/sp_defect_level_pull"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="100dp"/>
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_is_antiseptic_pull"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是否隔离："/>
+
+            <RadioButton
+                android:id="@+id/rb_antiseptic_pull"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="是"/>
+
+            <RadioButton
+                android:id="@+id/rb_no_antiseptic_pull"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="否"/>
+        </RadioGroup>
+
+        <TextView
+            style="@style/my_tv_style"
+            android:text="巡线道"/>
+
+        <RadioGroup
+            android:id="@+id/rg_evaluate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评价："/>
+
+            <RadioButton
+                android:id="@+id/rb_evaluate_good"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="好"/>
+
+            <RadioButton
+                android:id="@+id/rb_evaluate_general"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="一般"/>
+
+            <RadioButton
+                android:id="@+id/rb_evaluate_worse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="较差"/>
+        </RadioGroup>
+
+        <EditText
+            android:gravity="top"
+            android:id="@+id/et_evaluate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/et_inout_bg"
+            android:hint="请输入备注..."
+            android:minLines="5"
+            android:padding="5dp"/>
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/its_green"
+            android:text="提交"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="72dp"
+    android:layout_height="72dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:scaleType="centerCrop"/>
+
+        <Button
+            android:id="@+id/bt_del"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bt_dynamic_del" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_addImage"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:src="@drawable/btn_photo_add"
+        android:scaleType="centerCrop"/>
+
+
+</RelativeLayout>

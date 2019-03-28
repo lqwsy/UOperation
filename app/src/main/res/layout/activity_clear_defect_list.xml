@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_0"
+    android:orientation="vertical"
+    tools:context=".ui.activity.ClearDefectListActivity">
+
+    <RelativeLayout
+        android:id="@+id/ll_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/its_green">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/icon_back"/>
+
+        <TextView
+            android:id="@+id/tv_top_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="清障消除"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"/>
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/sp_16"
+            android:text="线路名称：" />
+
+        <TextView
+            android:id="@+id/tv_line_name"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginLeft="3dp"
+            android:gravity="center"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/sp_16"
+            android:text="未开启线路" />
+
+    </LinearLayout>
+    <View style="@style/view_Style"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/sp_16"
+            android:text="杆塔区间：" />
+
+        <TextView
+            android:id="@+id/tv_tower_from_to"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginLeft="3dp"
+            android:gravity="center"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/sp_16"
+            android:text="0-0" />
+
+    </LinearLayout>
+    <View style="@style/view_Style"/>
+
+    <ListView
+        android:id="@+id/lv_clear_def"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listfooter="@layout/layout_clear_defect_list_foot"
+        tools:listitem="@layout/item_clear_defect_list"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/stop_patrol"
+            android:text="提交"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white_1"
+              android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_check_type"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/view_padding_10">
+
+        <RadioButton
+            android:id="@+id/rb_grounding_resistance"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_check_type_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="接地电阻"
+            android:textColor="@color/check_type_text_selector"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_infrared_temperature"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_check_type_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="红外测温"
+            android:textColor="@color/check_type_text_selector"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_zero_check"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_check_type_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="零值检测"
+            android:textColor="@color/check_type_text_selector"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_ice_cover"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_check_type_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="覆冰检测"
+            android:textColor="@color/check_type_text_selector"
+            android:textSize="16sp"/>
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/view_padding_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="线路名称："
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_line_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#33000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/view_padding_10">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="杆         塔："
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_tower_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#33000000"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/grounding_resistance"/>
+
+            <include layout="@layout/infrared_temperature"/>
+
+            <include layout="@layout/zero_check"/>
+
+            <include layout="@layout/ice_cover"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/stop_patrol"
+        android:text="提交"
+        android:textColor="@android:color/white"/>
+</LinearLayout>

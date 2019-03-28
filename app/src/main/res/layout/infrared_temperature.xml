@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layout_infrared_temperature"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/view_padding_10"
+            android:paddingBottom="@dimen/view_padding_10"
+            android:paddingLeft="@dimen/view_padding_10"
+            android:paddingRight="@dimen/view_padding_10"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="导线温度："
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_guide_line"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="@drawable/shape_et_bg"
+                android:inputType="numberSigned|numberDecimal"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="环境温度："
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_environment_temperature"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="@drawable/shape_et_bg"
+                android:inputType="numberSigned|numberDecimal"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/view_padding_10"
+        android:paddingRight="@dimen/view_padding_10">
+
+        <RadioGroup
+            android:id="@+id/rg_part_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_naizhang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="耐张接头"/>
+
+            <RadioButton
+                android:id="@+id/rb_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="中间接头"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_naizhang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/view_padding_10"
+            android:paddingRight="@dimen/view_padding_10">
+            <TextView
+                android:id="@+id/tv_wire_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="导线类型："
+                android:textSize="16sp"/>
+            <RadioGroup
+                android:id="@+id/rg_joint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_single_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="单导线"/>
+
+                <RadioButton
+                    android:id="@+id/rb_double_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="双导线"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_single_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <!--android:visibility="gone"-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tv_line_first"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="A"
+                    />
+                <TextView
+                    android:id="@+id/tv_line_second"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="B"/>
+                <TextView
+                    android:id="@+id/tv_line_third"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="C"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/big_size_slide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:text="大号侧"/>
+                <EditText
+                    android:id="@+id/et_big_size_slide_a"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_et_bg"
+                    android:inputType="numberDecimal"/>
+                <EditText
+                    android:id="@+id/et_big_size_slide_b"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_et_bg"
+                    android:inputType="numberDecimal"/>
+                <EditText
+                    android:id="@+id/et_big_size_slide_c"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_et_bg"
+                    android:inputType="numberDecimal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/small_size_slide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:text="小号侧"/>
+                <EditText
+                    android:id="@+id/et_small_size_slide_a"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_et_bg"
+                    android:inputType="numberDecimal"/>
+                <EditText
+                    android:id="@+id/et_small_size_slide_b"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_et_bg"
+                    android:inputType="numberDecimal"/>
+                <EditText
+                    android:id="@+id/et_small_size_slide_c"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_et_bg"
+                    android:inputType="numberDecimal"/>
+            </LinearLayout>
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="@dimen/view_padding_10"-->
+                <!--android:paddingRight="@dimen/view_padding_10">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/big_size_slide"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:text="大号侧"-->
+                    <!--android:textSize="16sp"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/small_size_slide"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="30dp"-->
+                    <!--android:text="小号侧"-->
+                    <!--android:textSize="16sp"/>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingTop="@dimen/view_padding_10">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_line_first"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginRight="20sp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="A"/>-->
+
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_big_size_slide_a"-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:background="@drawable/shape_et_bg"-->
+                    <!--android:inputType="numberDecimal"/>-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_small_size_slide_a"-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:background="@drawable/shape_et_bg"-->
+                    <!--android:inputType="numberDecimal"/>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingTop="@dimen/view_padding_10">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_line_second"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginRight="20sp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="B"/>-->
+
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_big_size_slide_b"-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:background="@drawable/shape_et_bg"-->
+                    <!--android:inputType="numberDecimal"/>-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_small_size_slide_b"-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:background="@drawable/shape_et_bg"-->
+                    <!--android:inputType="numberDecimal"/>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingTop="@dimen/view_padding_10">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_line_third"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginRight="20sp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="C"/>-->
+
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_big_size_slide_c"-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:background="@drawable/shape_et_bg"-->
+                    <!--android:inputType="numberDecimal"/>-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_small_size_slide_c"-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:background="@drawable/shape_et_bg"-->
+                    <!--android:inputType="numberDecimal"/>-->
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_double_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/view_padding_10">
+
+                <TextView
+                    android:id="@+id/tv_double_big_size_slide"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="大号侧"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_double_small_size_slide"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="小号侧"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="上"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="下"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="上"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="下"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/view_padding_10">
+
+                <TextView
+                    android:id="@+id/tv_ver_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20sp"
+                    android:gravity="center_vertical"
+                    android:text="A"/>
+
+
+                <EditText
+                    android:id="@+id/et_double_big_size_slide_up_a"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/shape_et_bg"/>
+
+                <EditText
+                    android:id="@+id/et_double_big_size_slide_down_a"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:inputType="numberDecimal"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/shape_et_bg"/>
+
+                <EditText
+                    android:id="@+id/et_double_small_size_slide_up_a"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:inputType="numberDecimal"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/shape_et_bg"/>
+
+                <EditText
+                    android:id="@+id/et_double_small_size_slide_down_a"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:inputType="numberDecimal"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/shape_et_bg"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/view_padding_10">
+
+                <TextView
+                    android:id="@+id/tv_ver_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20sp"
+                    android:gravity="center_vertical"
+                    android:text="B"/>
+
+
+                <EditText
+                    android:id="@+id/et_double_big_size_slide_up_b"
+                    android:layout_width="60dp"
+                    android:inputType="numberDecimal"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_et_bg"/>
+
+                <EditText
+                    android:id="@+id/et_double_big_size_slide_down_b"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/shape_et_bg"/>
+
+                <EditText
+                    android:id="@+id/et_double_small_size_slide_up_b"
+                    android:layout_width="60dp"
+                    android:inputType="numberDecimal"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/shape_et_bg"/>
+
+                <EditText
+                    android:id="@+id/et_double_small_size_slide_down_b"
+                    android:layout_width="60dp"
+                    android:inputType="numberDecimal"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/shape_et_bg"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/view_padding_10">
+
+                <TextView
+                    android:id="@+id/tv_ver_third"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20sp"
+                    android:gravity="center_vertical"
+                    android:text="C"/>
+
+
+                <EditText
+                    android:id="@+id/et_double_big_size_slide_up_c"
+                    android:layout_width="60dp"
+                    android:inputType="numberDecimal"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_et_bg"/>
+
+                <EditText
+                    android:id="@+id/et_double_big_size_slide_down_c"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:inputType="numberDecimal"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/shape_et_bg"/>
+
+                <EditText
+                    android:id="@+id/et_double_small_size_slide_up_c"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/shape_et_bg"/>
+
+                <EditText
+                    android:id="@+id/et_double_small_size_slide_down_c"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:inputType="numberDecimal"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/shape_et_bg"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layout_middle"
+        layout="@layout/item_check_temperature">
+    </include>
+
+    <!--LinearLayout
+        android:id="@+id/layout_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/view_padding_10"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="相位："
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/et_center_a"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/view_padding_10"
+            android:background="@drawable/shape_et_bg"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_padding_10"
+            android:text="B"/>
+
+        <EditText
+            android:id="@+id/et_center_b"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/view_padding_10"
+            android:background="@drawable/shape_et_bg"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_padding_10"
+            android:text="C"/>
+
+        <EditText
+            android:id="@+id/et_center_c"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/view_padding_10"
+            android:background="@drawable/shape_et_bg"
+            android:inputType="numberDecimal"/>
+    </LinearLayout-->
+</LinearLayout>

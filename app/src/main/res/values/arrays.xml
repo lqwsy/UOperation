@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="left_menu_item_name">
+        <item>我的巡视</item>
+        <item>计划任务</item>
+        <item>临时通知</item>
+        <item>系统设置</item>
+    </string-array>
+
+
+    <string-array name="tour_result">
+        <item>缺陷记录</item>
+        <item>交跨记录</item>
+        <item>检测记录</item>
+        <item>辅助记录</item>
+    </string-array>
+
+    <string-array name="break_document">
+        <item>专档列表</item>
+        <item>外破建档</item>
+    </string-array>
+
+    <string-array name="hidden_danger">
+        <item>树障管理</item>
+        <item>隐患管理</item>
+        <item>棚膜管理</item>
+    </string-array>
+
+    <string-array name="tree_barrier">
+        <item>树障列表</item>
+        <item>新建树障</item>
+    </string-array>
+    <string-array name="greenhouse_film">
+        <item>棚膜列表</item>
+        <item>新建棚膜</item>
+    </string-array>
+    <string-array name="hdm">
+        <item>隐患列表</item>
+        <item>新建隐患</item>
+    </string-array>
+
+    <string-array name="work_order">
+        <item>工单列表</item>
+        <item>我的工单</item>
+    </string-array>
+
+    <string-array name="route_planning">
+        <item>躲避拥堵</item>
+        <item>不走高速</item>
+        <item>避免收费</item>
+        <item>高速优先</item>
+    </string-array>
+
+    <string-array name="defect_level">
+        <item>一般</item>
+        <item>严重</item>
+        <item>危急</item>
+    </string-array>
+
+    <string-array name="type_of_work">
+        <!--<item>巡检工作类型</item>-->
+        <!--<item>检测工作类型</item>-->
+        <item>维护工作类型</item>
+        <!--<item>带电作业工作类型</item>-->
+        <item>停电检修工作类型</item>
+        <item>基建验收工作类型</item>
+    </string-array>
+
+</resources>

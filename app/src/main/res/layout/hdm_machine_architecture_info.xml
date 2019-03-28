@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@drawable/shape_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_hdm_info_tile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="xx信息"
+        android:textSize="@dimen/sp_12" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black_10" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_hdm_ma_basic_situation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/Margin_5dp"
+            android:text="基本信息："
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/sp_14" />
+
+        <EditText
+            android:id="@+id/et_hdm_ma_basic_situation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/Margin_5dp"
+            android:layout_marginRight="@dimen/Margin_5dp"
+            android:layout_marginTop="@dimen/Margin_5dp"
+            android:layout_toRightOf="@id/tv_hdm_ma_basic_situation"
+            android:background="@drawable/shape_et_bg"
+            android:gravity="top"
+            android:maxLines="3"
+            android:minLines="3"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_hdm_ma_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/Margin_5dp"
+            android:text="xx高度(米)："
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/sp_14" />
+
+        <EditText
+            android:id="@+id/et_hdm_ma_height"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/Margin_5dp"
+            android:layout_marginRight="@dimen/Margin_5dp"
+            android:layout_marginTop="@dimen/Margin_5dp"
+            android:layout_toRightOf="@id/tv_hdm_ma_height"
+            android:background="@drawable/shape_et_bg"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_hdm_ma_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="37sp"
+            android:text="边距(米)："
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/sp_14" />
+
+        <EditText
+            android:id="@+id/et_hdm_ma_margin"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/Margin_5dp"
+            android:layout_marginRight="@dimen/Margin_5dp"
+            android:layout_marginTop="@dimen/Margin_5dp"
+            android:layout_toRightOf="@id/tv_hdm_ma_margin"
+            android:background="@drawable/shape_et_bg"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_hdm_ma_clear_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="36sp"
+            android:text="净距(米)："
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/sp_14" />
+
+        <EditText
+            android:id="@+id/et_hdm_ma_clear_distance"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/Margin_5dp"
+            android:layout_marginRight="@dimen/Margin_5dp"
+            android:layout_marginTop="@dimen/Margin_5dp"
+            android:layout_toRightOf="@id/tv_hdm_ma_clear_distance"
+            android:background="@drawable/shape_et_bg"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/autonavi_port_footer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/autonavi_close"
+        android:layout_width="49.0dip"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/drive_footer_icon_close_day_selector" />
+
+    <RelativeLayout
+        android:id="@+id/autonavi_speed_click_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/autonavi_continue_navi"
+        android:layout_toRightOf="@+id/autonavi_close"
+        android:background="@drawable/drive_footer_bg"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/autonavi_speed_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10.0dip"
+            android:text=""
+            android:textColor="#ff4287ff"
+            android:textSize="17.0dip" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/autonavi_continue_navi"
+        android:layout_width="49.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/autonavi_simulator_land_pause" />
+</RelativeLayout>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.SheekDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/ll_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/its_green">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/icon_back"/>
+
+        <TextView
+            android:id="@+id/tv_top_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="工单详情"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"/>
+
+        <ImageView
+            android:id="@+id/tv_oldPic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_btn_photo"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            style="@style/verticalLinearStyle"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                style="@style/linearStyle">
+
+                <TextView
+                    style="@style/text_Style1"
+                    android:text="工单编号：" />
+
+                <TextView
+                    android:id="@+id/tv_work_num"
+                    style="@style/text_Style"
+                    android:text="1235455555555" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/view_Style"/>
+
+            <LinearLayout
+                style="@style/linearStyle">
+
+                <TextView
+                    style="@style/text_Style1"
+                    android:text="派  单  人：" />
+
+                <TextView
+                    android:id="@+id/tv_work_man"
+                    style="@style/text_Style"
+                    android:text="王五" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/view_Style"/>
+
+            <LinearLayout
+                style="@style/linearStyle">
+
+                <TextView
+                    style="@style/text_Style1"
+                    android:text="联系电话：" />
+
+                <TextView
+                    android:id="@+id/tv_work_tel"
+                    style="@style/text_Style"
+                    android:text="77031058" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/view_Style"/>
+
+            <LinearLayout
+                style="@style/linearStyle">
+
+                <TextView
+                    style="@style/text_Style1"
+                    android:text="派单时间：" />
+
+                <TextView
+                    android:id="@+id/tv_work_time"
+                    style="@style/text_Style"
+                    android:text="2017-25-25 14:34" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/view_Style"/>
+
+            <LinearLayout
+                style="@style/linearStyle">
+
+                <TextView
+                    style="@style/text_Style1"
+                    android:layout_gravity="top"
+                    android:text="任务说明：" />
+
+                <TextView
+                    android:id="@+id/et_work_remark"
+                    style="@style/work_order_textView"
+                    android:textSize="16sp"
+                    android:maxLines="6"
+                    android:minLines="4"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#000"
+                    android:paddingTop="6dp"
+                    android:text="1235455555555" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/view_Style"/>
+
+            <LinearLayout
+                style="@style/linearStyle">
+
+                <TextView
+                    style="@style/text_Style1"
+                    android:text="线路：" />
+
+                <TextView
+                    android:id="@+id/tv_work_line"
+                    style="@style/text_Style"
+                    android:text="1235455555555" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/view_Style"/>
+
+            <LinearLayout
+                style="@style/linearStyle">
+
+                <TextView
+                    style="@style/text_Style1"
+                    android:text="杆塔：" />
+
+                <TextView
+                    android:id="@+id/tv_work_tower"
+                    style="@style/text_Style"
+                    android:text="1235455555555" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/view_Style"/>
+
+            <LinearLayout
+                style="@style/linearStyle">
+
+                <TextView
+                    android:id="@+id/tv_work_type_name"
+                    style="@style/text_Style1"
+                    android:text="类别：" />
+
+                <TextView
+                    android:id="@+id/tv_work_type"
+                    style="@style/text_Style"
+                    android:text="1235455555555" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/view_Style"/>
+
+            <LinearLayout
+                style="@style/linearStyle">
+
+                <TextView
+                    android:id="@+id/tv_work_level_name"
+                    style="@style/text_Style1"
+                    android:text="等级：" />
+
+                <TextView
+                    android:id="@+id/tv_work_level"
+                    style="@style/text_Style"
+                    android:text="1235455555555" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/view_Style"/>
+
+            <LinearLayout
+                style="@style/linearStyle">
+
+                <TextView
+                    android:id="@+id/tv_work_des_name"
+                    style="@style/text_Style1"
+                    android:layout_gravity="top"
+                    android:text="描述：" />
+
+                <TextView
+                    android:id="@+id/tv_work_des"
+                    style="@style/work_order_textView"
+                    android:textSize="16sp"
+                    android:maxLines="10"
+                    android:minLines="6"
+                    android:layout_marginLeft="5dp"
+                    android:paddingTop="6dp"
+                    android:textColor="#000"
+                    android:text="1235455555555" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/view_Style"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btn_load_line"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="加载线路"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/shape_btn_sure_bg"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+        <Button
+            android:id="@+id/btn_play"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="抢单"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/shape_btn_sure_bg"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btn_play2"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="标注不存在"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/shape_btn_sure_bg"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

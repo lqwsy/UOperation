@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_zero_check"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible"
+    >
+
+    <RadioGroup
+        android:id="@+id/rg_tower_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="left|center_vertical"
+        android:padding="@dimen/view_padding_10"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="杆塔类型："/>
+        <RadioButton
+            android:id="@+id/rb_straight_tower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="直线塔" />
+
+        <RadioButton
+            android:id="@+id/rb_tension_tower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="耐张塔" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/view_padding_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绝缘子片数："/>
+
+        <EditText
+            android:id="@+id/et_jueyuan_count"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:background="@drawable/shape_et_bg"
+            android:inputType="numberDecimal"/>
+
+
+        <TextView
+            android:id="@+id/tv_tiaoxian_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳线片数："
+            android:paddingLeft="@dimen/Margin_5dp"/>
+
+        <EditText
+            android:id="@+id/et_tiaoxian_count"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:background="@drawable/shape_et_bg"
+            android:inputType="numberDecimal"/>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_loop_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="@dimen/view_padding_10"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绝缘串类型：" />
+        <RadioButton
+            android:id="@+id/rb_single_loop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="单串" />
+
+        <RadioButton
+            android:id="@+id/rb_double_loop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="双串" />
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/rg_tiaoxian_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="@dimen/view_padding_10"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳线串类型：" />
+        <RadioButton
+            android:id="@+id/rb_tx_single_loop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="单串" />
+
+        <RadioButton
+            android:id="@+id/rb_tx_double_loop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="双串" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_tower_overview"
+        android:layout_marginTop="@dimen/Margin_5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:minHeight="150dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/btn_select_tower"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="@drawable/shape_btn_sure_bg"
+            android:text="标注零值"
+            android:textColor="#fff" />
+        <ImageView
+            android:id="@+id/img_tower_overview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+</LinearLayout>

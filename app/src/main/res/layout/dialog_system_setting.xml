@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_change_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/view_padding_10">
+
+        <TextView
+            android:id="@+id/tv_server_choose"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="服务器选择："
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/sp_server_choose"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/view_padding_10">
+
+        <TextView
+            android:id="@+id/tv_server_ip"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="服务器IP："
+            android:textSize="20sp"/>
+        <!--测试-->
+        <!--android:text="113.108.203.26"-->
+        <!--赣西-->
+        <!--android:text="223.84.234.157"-->
+        <!--萍乡-->
+        <!--117.40.230.100-->
+        <!--九江-->
+        <!--113.108.203.26 -->
+        <EditText
+            android:id="@+id/et_server_ip"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:digits="0123456789."
+            android:background="@drawable/shape_et_bg"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/view_padding_10">
+
+        <TextView
+            android:id="@+id/tv_server_port"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="服务器端口："
+            android:textSize="20sp"/>
+        <!--测试-->
+        <!--android:text="6003"-->
+        <!--赣西-->
+        <!--android:text="7002"-->
+        <!--自己的-->
+        <!--6303-->
+        <!--九江 9592-->
+        <EditText
+            android:id="@+id/et_server_port"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_et_bg"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/view_padding_10">
+
+        <TextView
+            android:id="@+id/tv_push_port"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="通知推送端口："
+            android:textSize="20sp"/>
+        <!--测试-->
+        <!--android:text="6013"-->
+        <!--赣西-->
+        <!--android:text="7003"-->
+        <!--自己的-->
+        <!--6313-->
+        <!--九江 9593-->
+        <EditText
+            android:id="@+id/et_push_port"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_et_bg"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="提交"/>
+    </RelativeLayout>
+
+</LinearLayout>

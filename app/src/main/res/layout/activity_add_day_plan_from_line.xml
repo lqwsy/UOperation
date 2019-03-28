@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/its_green"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_open_close_drawer"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/view_padding_10"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="从线路中添加"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="工作类型：" />
+
+        <Spinner
+            android:id="@+id/sp_work_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工作内容：" />
+
+        <TextView
+            android:background="@drawable/shape_et_bg"
+            android:padding="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/tv_work_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></TextView>
+
+        <Button
+            android:id="@+id/btn_select_job_content"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@color/tab_bg"
+            android:text="选择"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="备注：" />
+
+        <EditText
+            android:id="@+id/et_remark"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="4"
+            android:background="@drawable/shape_et_bg"></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_select_line"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/Margin_5dp"
+            android:layout_marginLeft="@dimen/Margin_20dp"
+            android:layout_marginTop="@dimen/Margin_5dp"
+            android:background="@color/tab_bg"
+            android:elevation="@dimen/dp_4"
+            android:text="添加线路"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+   <!-- <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </HorizontalScrollView>-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_et_bg" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recycler"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginRight="30dp"
+            android:background="@color/tab_bg"
+            android:text="保存"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/dp_40"
+            android:background="@color/tab_bg"
+            android:text="取消"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

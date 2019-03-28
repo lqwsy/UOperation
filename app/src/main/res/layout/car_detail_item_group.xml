@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_1"
+    android:minHeight="83.0dip"
+    android:orientation="horizontal"
+    android:padding="0.0dip">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/group_contener"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/car_detail_item_selector"
+            android:paddingBottom="22.0dip"
+            android:paddingTop="22.0dip">
+
+            <ImageView
+                android:id="@+id/group_icon"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_marginLeft="22.0dip"
+                android:background="@drawable/action9"
+                android:contentDescription="@null"
+                android:visibility="gone"
+                android:scaleType="center" />
+
+            <LinearLayout
+                android:id="@+id/section_name_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16.0dip"
+                android:layout_toRightOf="@+id/group_icon"
+                android:clickable="false"
+                android:focusable="false"
+                android:orientation="vertical"
+                android:paddingLeft="22.0dip">
+
+                <TextView
+                    android:id="@+id/section_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/driver_directions_more_down"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:minHeight="25.0dip"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#ff333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/group_des"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:gravity="center|left"
+                    android:text=""
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/station_list_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="22.0dip" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="64.0dip"
+        android:background="#ffe0e0e0" />
+</RelativeLayout>

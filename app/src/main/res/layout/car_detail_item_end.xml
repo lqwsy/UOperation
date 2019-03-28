@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="0.0dip">
+
+    <RelativeLayout
+        android:id="@+id/end_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/car_detail_item_selector"
+        android:minHeight="62.0dip">
+
+        <LinearLayout
+            android:id="@+id/section_name_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="22.0dip">
+
+            <ImageView
+                android:id="@+id/section_name_icon"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:background="@drawable/car_list_end_line"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/section_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22.0dip"
+                android:layout_marginRight="14.0dip"
+                android:background="@null"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:focusable="false"
+                android:gravity="center|left"
+                android:minHeight="40.0dip"
+                android:text=""
+                android:textColor="#ff212121"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/section_name_layout"
+            android:background="#ffe0e0e0" />
+    </RelativeLayout>
+</RelativeLayout>

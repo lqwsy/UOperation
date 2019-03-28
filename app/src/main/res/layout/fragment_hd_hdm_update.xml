@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_hdm_times"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/Margin_5dp"
+                android:text="第一次巡视"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_hdm_patrol_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/Margin_5dp"
+                        android:text="巡视时间："
+                        android:textColor="@color/black_1"
+                        android:textSize="@dimen/sp_14" />
+
+                    <Spinner
+                        android:id="@+id/sp_hdm_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_hdm_patrol_time">
+                    </Spinner>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_hdm_patrol_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/Margin_5dp"
+                        android:text="巡视人员："
+                        android:textColor="@color/black_1"
+                        android:textSize="@dimen/sp_14" />
+
+                    <EditText
+                        android:id="@+id/et_hdm_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/Margin_5dp"
+                        android:layout_marginRight="@dimen/Margin_5dp"
+                        android:layout_marginTop="@dimen/Margin_5dp"
+                        android:layout_toRightOf="@id/tv_hdm_patrol_person"
+                        android:background="@drawable/shape_et_bg"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_14" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_hdm_update_basic_situation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/Margin_5dp"
+                    android:text="基本情况："
+                    android:textColor="@color/black_1"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_hdm_update_basic_situation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/Margin_5dp"
+                    android:layout_marginRight="@dimen/Margin_5dp"
+                    android:layout_marginTop="@dimen/Margin_5dp"
+                    android:layout_toRightOf="@id/tv_hdm_update_basic_situation"
+                    android:background="@drawable/shape_et_bg"
+                    android:gravity="top"
+                    android:maxLines="3"
+                    android:minLines="3"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/include_hdm_machine"
+                    layout="@layout/hdm_machine_architecture_info">
+                </include>
+
+                <include
+                    android:id="@+id/include_hdm_architecture"
+                    layout="@layout/hdm_machine_architecture_info">
+                </include>
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/hdm_update_cpp"
+                layout="@layout/hdm_other_info">
+            </include>
+
+            <include
+                android:id="@+id/hdm_update_sn"
+                layout="@layout/hdm_other_info">
+            </include>
+
+            <include
+                android:id="@+id/hdm_update_olmd"
+                layout="@layout/hdm_other_info">
+            </include>
+
+            <include
+                android:id="@+id/hdm_update_ws"
+                layout="@layout/hdm_other_info">
+            </include>
+
+            <include
+                android:id="@+id/hdm_update_st"
+                layout="@layout/hdm_other_info">
+            </include>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_hdm_update_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/Margin_5dp"
+                    android:text="图片："
+                    android:textColor="@color/black_1"
+                    android:textSize="17sp" />
+
+                <com.uflycn.uoperation.widget.AddImageGridView
+                    android:id="@+id/aigv_hdm_update_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/tv_hdm_update_img"
+                    android:columnWidth="50dp"
+                    android:horizontalSpacing="2dp"
+                    android:numColumns="3"
+                    android:padding="8dp"
+                    android:verticalSpacing="2dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/Margin_20dp">
+
+                <Button
+                    android:id="@+id/btn_hdm_update"
+                    android:layout_width="80dp"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/shape_btn_sure_bg"
+                    android:text="更新"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

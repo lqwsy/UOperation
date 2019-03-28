@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:orientation="vertical"
+              android:paddingBottom="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+
+        <Button
+            android:id="@+id/btn_close_dialog"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/close"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_Line_No"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="线路名称:"
+                android:textColor="@color/black_1"
+                android:textSize="18sp"/>
+
+            <Spinner
+                android:id="@+id/sp_Line_register"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/Margin_5dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_tower_no"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_tower_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="杆塔编号:"
+                android:textColor="@color/black_1"
+                android:textSize="18sp"/>
+
+            <Spinner
+                android:id="@+id/sp_tower_register"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/Margin_5dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_patrol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_tour_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_horizontal"
+            android:text="巡视性质:"
+            android:textColor="@color/black_1"
+            android:textSize="18sp"/>
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_tour_character"
+            android:orientation="vertical">
+
+
+            <RadioButton
+                android:id="@+id/rb_state_tour"
+                android:layout_width="151dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:paddingLeft="10dp"
+                android:text="状态巡视"
+                android:textSize="17sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_special_tour"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="特殊巡视"
+                android:textSize="17sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_falut_tour"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="故障巡视"
+                android:textSize="17sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_defect_tour"
+                android:layout_width="151dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="  消    缺"
+                android:textSize="17sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_check_tour"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="  检    测"
+                android:textSize="17sp"/>
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_tower_from_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:text="巡检区段："
+            android:textColor="@color/black_1"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="@dimen/Margin_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_et_bg"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="起始杆塔:"
+                    />
+
+                <Spinner
+                    android:id="@+id/sp_tower_from"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/Margin_5dp"
+                    android:layout_weight="1"
+                    android:dropDownHeight="100dp"
+                    android:dropDownHorizontalOffset="20dp"
+                    android:dropDownVerticalOffset="-50dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_et_bg"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="终止杆塔:"
+                    />
+
+                <Spinner
+                    android:id="@+id/sp_tower_to"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/Margin_5dp"
+                    android:layout_weight="1"
+                    android:dropDownHeight="100dp"
+                    android:dropDownHorizontalOffset="20dp"
+                    android:dropDownVerticalOffset="-50dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_work_project"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作业项目:"
+                android:textColor="@color/black_1"
+                android:textSize="18sp"/>
+
+            <Spinner
+                android:id="@+id/sp_work_project"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/Margin_5dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_reg_loaction"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pop_btn"
+            android:text="到位登记"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+</LinearLayout>

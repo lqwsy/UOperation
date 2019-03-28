@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_0"
+    android:gravity="bottom"
+    app:umanoDragView="@+id/drag_panel"
+    app:umanoOverlay="true"
+    app:umanoScrollableView="@+id/drag_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.esri.android.map.MapView
+            android:id="@+id/frag_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/rllayout_common"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlayout_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/its_green">
+
+                <ImageView
+                    android:id="@+id/iv_open_close_drawer"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/view_padding_10"
+                    android:src="@drawable/open_left_menu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:text="巡视页面"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llayout_account_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/rlayout_title"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/search_green" />
+
+                <EditText
+                    android:id="@+id/et_search_line_name"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="线路名称"
+                    android:imeOptions="actionSearch"
+                    android:maxLength="256"
+                    android:padding="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16.0dip" />
+
+                <ImageView
+                    android:id="@+id/img_search_clear"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10.0dip"
+                    android:src="@drawable/close" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_menu"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white_1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_tour_result"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:gravity="center"
+                        android:src="@drawable/nav_patrol" />
+
+                    <TextView
+                        android:id="@+id/tv_tour_result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="巡视登记"
+                        android:textColor="@color/rb_bottom_text_selector"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black_9" />
+
+                <LinearLayout
+                    android:id="@+id/ll_defect_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:gravity="center"
+                        android:src="@drawable/nav_patrol" />
+
+                    <TextView
+                        android:id="@+id/tv_defect_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="清障工单"
+                        android:textColor="@color/rb_bottom_text_selector"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black_9" />
+
+                <LinearLayout
+                    android:id="@+id/ll_dis_defect"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:gravity="center"
+                        android:src="@drawable/nav_management" />
+
+                    <TextView
+                        android:id="@+id/tv_dis_defect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="项目管理"
+                        android:textColor="@color/rb_bottom_text_selector"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black_9" />
+
+                <LinearLayout
+                    android:id="@+id/ll_outside_break"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:gravity="center"
+                        android:src="@drawable/nav_broken" />
+
+                    <TextView
+                        android:id="@+id/tv_outside_break"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="外破专档"
+                        android:textColor="@color/rb_bottom_text_selector"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_register_loaction"
+                android:layout_width="220dp"
+                android:layout_height="44dp"
+                android:layout_above="@id/ll_bottom_menu"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_btn_sure_bg"
+                android:text="到位登记"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/img_locate"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_above="@id/btn_register_loaction"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/pop_icon_positioning"
+                android:scaleType="centerInside"
+                android:src="@drawable/positioning_icon" />
+
+            <ImageView
+                android:id="@+id/img_navigation"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignRight="@id/btn_register_loaction"
+                android:layout_below="@id/img_locate"
+                android:layout_marginRight="4dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/pop_icon_navigation" />
+
+            <ImageView
+                android:id="@+id/img_area_tower"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@id/btn_register_loaction"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/near"
+                android:scaleType="centerInside"
+              />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/img_close_area_tower"-->
+            <!--android:layout_width="36dp"-->
+            <!--android:layout_height="36dp"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_above="@id/btn_register_loaction"-->
+            <!--android:layout_marginLeft="4dp"-->
+            <!--android:scaleType="centerInside"-->
+            <!--android:src="@drawable/scope_icon"-->
+            <!--android:background="@drawable/bg"/>-->
+
+        </RelativeLayout>
+
+        <include layout="@layout/navi_port_title" />
+    </RelativeLayout>
+
+    <!-- SLIDING LAYOUT -->
+    <include
+        android:id="@+id/dragView"
+        layout="@layout/layout_drag_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

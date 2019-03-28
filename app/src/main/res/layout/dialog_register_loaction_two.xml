@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:paddingBottom="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btn_close_dialog"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/close" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_tower_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="杆塔编号"
+                android:textColor="@color/black_1"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_tour_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="巡视性质："
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_tour_character"
+            android:orientation="vertical">
+
+
+            <RadioButton
+                android:id="@+id/rb_state_tour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:checked="true"
+                android:paddingLeft="10dp"
+                android:text="状态巡视"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb_special_tour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+                android:text="特殊巡视"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb_falut_tour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="故障巡视"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llayout_tower_from_to"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="巡检区段："
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:background="@drawable/shape_et_bg"
+                android:layout_marginBottom="@dimen/Margin_5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="起始杆塔:"
+                    android:gravity="center_vertical"
+                    />
+                <Spinner
+                    android:id="@+id/sp_tower_from"
+                    android:layout_marginLeft="@dimen/Margin_5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_et_bg"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="终止杆塔:"
+                    android:gravity="center_vertical"
+                    />
+                <Spinner
+                    android:id="@+id/sp_tower_to"
+                    android:layout_marginLeft="@dimen/Margin_5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_reg_loaction"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pop_btn"
+            android:text="到位登记"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

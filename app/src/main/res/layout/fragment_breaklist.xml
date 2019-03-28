@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_1"
+    tools:context=".ui.fragment.breakdocument.BreaklistFragment">
+
+    <LinearLayout
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_padding_10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:focusable="true"
+        android:background="@color/white_1"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_search_line"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/shape_et_bg"
+            android:hint="输入线路/杆塔关键词检索"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btn_search_line"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_btn_sure_bg"
+            android:singleLine="true"
+            android:text="搜索"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ListView
+            android:id="@+id/break_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

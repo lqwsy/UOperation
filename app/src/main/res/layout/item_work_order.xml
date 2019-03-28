@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/Margin_8dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:id="@+id/tv_order_id"
+                style="@style/work_order_textView"
+                android:textSize="16sp"
+                android:textColor="@color/green"
+                android:text="12345678"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/work_order_textView"
+                android:text="线路："/>
+
+            <TextView
+                android:id="@+id/tv_order_line"
+                style="@style/work_order_textView"
+                android:singleLine="true"
+                android:text="无"/>
+
+            <TextView
+                android:id="@+id/tv_order_tower"
+                android:layout_marginLeft="10dp"
+                style="@style/work_order_textView"
+                android:singleLine="true"
+                android:text="这是杆塔"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/work_order_textView"
+                android:text="类型："/>
+
+            <TextView
+                android:id="@+id/tv_order_type"
+                style="@style/work_order_textView"
+                android:text="缺陷"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/work_order_textView"
+                android:text="任务说明："/>
+
+            <TextView
+                android:id="@+id/tv_order_details"
+                style="@style/work_order_textView"
+                android:singleLine="true"
+                android:text="这是描述"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_order_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/shape_btn_sure_bg"
+            android:text="详情"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

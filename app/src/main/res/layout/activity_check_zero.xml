@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_zero_check"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_0"
+    tools:context="com.uflycn.uoperation.ui.check.CheckZeroActivity">
+
+    <RelativeLayout
+        android:id="@+id/ll_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_back"/>
+
+        <TextView
+            android:id="@+id/tv_top_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_blue_bright"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="零值检测"
+            android:textSize="17sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_line_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/view_padding_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="线路名称："/>
+
+        <TextView
+            android:id="@+id/tv_grid_line_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新白线1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_line_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/view_padding_10"
+        android:paddingRight="@dimen/view_padding_10"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="杆塔编号："/>
+
+        <TextView
+            android:id="@+id/tv_tower_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#1"/>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_tower_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/view_padding_10"
+        android:paddingRight="@dimen/view_padding_10">
+
+        <RadioButton
+            android:id="@+id/rb_straight_tower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="直线塔"/>
+
+        <RadioButton
+            android:id="@+id/rb_tension_tower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="耐张塔"/>
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_grid_line_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/view_padding_10"
+        android:paddingRight="@dimen/view_padding_10">
+
+        <RadioButton
+            android:id="@+id/rb_single_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="单串"/>
+
+        <RadioButton
+            android:id="@+id/rb_double_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="双串"/>
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/layout_straight_single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/view_padding_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:text="A"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:text="B"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/view_padding_10">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="横担测："/>
+
+                <ListView
+                    android:id="@+id/list_view_straight_single"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/view_padding_10"
+                    android:layout_toRightOf="@+id/tv_title"
+                    android:divider="@null"
+                    android:scrollbars="none"></ListView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_straight_double"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/view_padding_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="120dp"
+                    android:text="A"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:text="B"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:text="C"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginRight="20dp"
+                    android:text="大"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="小"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:text="大"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="小"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:text="大"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="小"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_item_double"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/view_padding_10">
+
+                <TextView
+                    android:id="@+id/tv_title_double"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="横担测："/>
+
+                <ListView
+                    android:id="@+id/list_view_straight_double"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/view_padding_10"
+                    android:layout_toRightOf="@+id/tv_title_double"
+                    android:divider="@null"
+                    android:scrollbars="none"></ListView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/check_tension_tower"/>
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="提交"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

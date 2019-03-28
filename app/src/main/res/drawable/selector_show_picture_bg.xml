@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/shape_btn_sure_bg" android:state_enabled="true"/>
+    <item android:drawable="@drawable/shape_btn_no_picture_bg" android:state_enabled="false"/>
+
+</selector>

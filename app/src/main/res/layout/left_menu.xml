@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rl_menu"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:background="@android:color/white"
+                android:clickable="true">
+
+    <ImageView
+        android:id="@+id/iv_icon_bg"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/tab_bg"/>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignBottom="@id/iv_icon_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_icon" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_padding_10"
+            android:text="点击登录"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_logout"
+        android:layout_below="@+id/ll">
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <com.uflycn.uoperation.widget.CustomRadioButton
+                android:id="@+id/rb_my_tour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_padding_10"
+                android:layout_marginRight="@dimen/Margin_40dp"
+                android:layout_marginTop="@dimen/view_padding_10"
+                android:button="@null"
+                android:drawableLeft="@drawable/patrol"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_10"
+                android:text="巡视页面"
+                android:textColor="@color/left_item_text_selector"
+                android:textSize="@dimen/common_text_size"/>
+
+            <com.uflycn.uoperation.widget.CustomRadioButton
+                android:visibility="gone"
+                android:id="@+id/rb_line_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_padding_10"
+                android:layout_marginRight="@dimen/Margin_40dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/patrol"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_10"
+                android:text="线路列表"
+                android:textColor="@color/left_item_text_selector"
+                android:textSize="@dimen/common_text_size"/>
+
+            <com.uflycn.uoperation.widget.CustomRadioButton
+                android:id="@+id/rb_plan_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_padding_10"
+                android:layout_marginRight="@dimen/Margin_40dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_plan"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_10"
+                android:text="@string/plan_task"
+                android:textColor="@color/left_item_text_selector"
+                android:textSize="@dimen/common_text_size"/>
+
+            <com.uflycn.uoperation.widget.CustomRadioButton
+                android:id="@+id/rb_work_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_padding_10"
+                android:layout_marginRight="@dimen/Margin_40dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_repair"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_10"
+                android:text="工单任务"
+                android:textColor="@color/left_item_text_selector"
+                android:textSize="@dimen/common_text_size"/>
+
+            <com.uflycn.uoperation.widget.CustomRadioButton
+                android:id="@+id/rb_temp_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_padding_10"
+                android:layout_marginRight="@dimen/Margin_40dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_notice"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_10"
+                android:text="@string/temp_task"
+                android:textColor="@color/left_item_text_selector"
+                android:textSize="@dimen/common_text_size"/>
+
+            <com.uflycn.uoperation.widget.CustomRadioButton
+                android:visibility="gone"
+                android:id="@+id/rb_day_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_padding_10"
+                android:layout_marginRight="@dimen/Margin_40dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_day_plan"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_10"
+                android:text="@string/day_plan"
+                android:textColor="@color/left_item_text_selector"
+                android:textSize="@dimen/common_text_size"/>
+
+            <com.uflycn.uoperation.widget.CustomRadioButton
+                android:id="@+id/rb_tour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_padding_10"
+                android:layout_marginRight="@dimen/Margin_40dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_patrol"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_10"
+                android:text="@string/my_tour"
+                android:textColor="@color/left_item_text_selector"
+                android:textSize="@dimen/common_text_size"/>
+
+            <com.uflycn.uoperation.widget.CustomRadioButton
+                android:id="@+id/rb_document"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_padding_10"
+                android:layout_marginRight="@dimen/Margin_40dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_manual"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_10"
+                android:text="@string/document"
+                android:textColor="@color/left_item_text_selector"
+                android:textSize="@dimen/common_text_size"/>
+
+            <com.uflycn.uoperation.widget.CustomRadioButton
+                android:id="@+id/rb_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_padding_10"
+                android:layout_marginRight="@dimen/Margin_40dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_set"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_10"
+                android:text="@string/system_setting"
+                android:textColor="@color/left_item_text_selector"
+                android:textSize="@dimen/common_text_size"/>
+        </RadioGroup>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/tab_line"
+        android:text="退出登录"
+        android:textColor="@color/black_1"/>
+
+</RelativeLayout>
