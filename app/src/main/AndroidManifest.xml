@@ -224,6 +224,7 @@
             android:name=".ui.fragment.hiddendanger.view.TreeBarrierUpdateActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
             android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity android:name=".ui.fragment.hiddendanger.view.SpecialTourActivity"></activity>
     </application>
 
 </manifest>

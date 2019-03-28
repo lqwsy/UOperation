@@ -110,9 +110,8 @@ public class TreeBarrierListFragment extends DemoBaseFragment implements HiddenD
         }
         //已经到位登记，则获取登记塔的ID
         if (MyApplication.registeredTower != null) {
-            Log.d("lqwtest", "MyApplication.registeredTower != null");
             lineId = "";
-            towerId = MyApplication.registeredTower.getSysTowerID() + "";
+            towerId = getTowerId(MyApplication.registeredTower.getSysTowerID() + "");
         }
 
         presenter.getTreeBarrierDefectList(lineId, "TreeTask", "0", lineName, towerId);
@@ -155,7 +154,7 @@ public class TreeBarrierListFragment extends DemoBaseFragment implements HiddenD
                 String result = etSearchName.getText().toString().trim();
                 if (!StringUtils.isEmptyOrNull(result)) {
                     if (StringUtils.isIntString(result)) {
-                        towerId = result;
+                        towerId = getTowerId(result);
                     } else {
                         lineName = result;
                     }
@@ -173,7 +172,6 @@ public class TreeBarrierListFragment extends DemoBaseFragment implements HiddenD
     //获取数据成功回调
     @Override
     public void onPostSuccess(DefectInfo defectInfo) {
-        ToastUtil.show("刷新成功！");
         if (tbSwipeRefresh != null) {
             tbSwipeRefresh.setRefreshing(false);
         }
@@ -182,7 +180,7 @@ public class TreeBarrierListFragment extends DemoBaseFragment implements HiddenD
         }
         treeDefectList = defectInfo.getTreeDefectPoint();
         if (treeDefectList == null || treeDefectList.size() <= 0) {
-            if(!StringUtils.isEmptyOrNull(towerId)){
+            if (!StringUtils.isEmptyOrNull(towerId)) {
                 ToastUtil.show("该杆塔无树障数据！");
                 return;
             }
@@ -190,19 +188,40 @@ public class TreeBarrierListFragment extends DemoBaseFragment implements HiddenD
             return;
         }
         myListViewAdapter.onDataChange(treeDefectList);
+        ToastUtil.show("刷新成功！");
+
     }
 
     //获取数据失败回调
     @Override
     public void onPostFail(String msg) {
-        tbSwipeRefresh.setRefreshing(false);
+        if (tbSwipeRefresh != null) {
+            tbSwipeRefresh.setRefreshing(false);
+        }
         ToastUtil.show(msg);
     }
 
     @Override
     public void onStart() {
-        Log.d("lqwtest","fragment onstart!");
         refreshData();
         super.onStart();
+    }
+
+
+    @Override
+    public void onDestroy() {
+        presenter.cancelAll();
+        super.onDestroy();
+    }
+
+    //获取杆塔前后区段
+    private String getTowerId(String towerId) {
+        try {
+            int value = Integer.parseInt(towerId);
+            return (value - 1) + "," + value;
+        } catch (Exception e) {
+            Log.d("lqwtest", "getTowerId err = ", e);
+        }
+        return null;
     }
 }

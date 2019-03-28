@@ -186,7 +186,6 @@ public class TreeBarrierUpdateActivity extends Activity {
         try {
             int towerA_ID = treeDefectPointBean.getTowerA_Id();
             int towerB_ID = treeDefectPointBean.getTowerB_Id();
-            Log.d("lqwtest", "towerA_ID = " + towerA_ID + " towerB_ID = " + towerB_ID);
 
             String sTowerDistance = smallTowerDistance.getText().toString().trim();
             if (StringUtils.isEmptyOrNull(sTowerDistance) || !StringUtils.isFloatString(sTowerDistance)) {

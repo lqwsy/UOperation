@@ -1,5 +1,6 @@
 package com.uflycn.uoperation.ui.fragment.hiddendanger.view;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.Log;
@@ -82,6 +83,7 @@ public class TreeBarrierAddFragment extends DemoBaseFragment implements HiddenDa
     private List<SpinnerOption> lineNameList;
     private ArrayAdapter<SpinnerOption> lineNameAdapter;
     ArrayAdapter<SpinnerOption> towerAdapter;
+    private ProgressDialog mProgressDialog;
 
 
     @Override
@@ -91,6 +93,9 @@ public class TreeBarrierAddFragment extends DemoBaseFragment implements HiddenDa
 
     @Override
     protected void initView() {
+        mProgressDialog = new ProgressDialog(getActivity());
+        mProgressDialog.setMessage("正在添加...");
+        mProgressDialog.setCanceledOnTouchOutside(false);
         initLine();
         initSpinner();
         datas = new ArrayList<>();
@@ -222,13 +227,21 @@ public class TreeBarrierAddFragment extends DemoBaseFragment implements HiddenDa
 
     @Override
     public void onPostSuccess(TreeBarrierBean treeBarrierBean) {
+        mProgressDialog.dismiss();
         ToastUtil.show("上传成功！");
         reset();
     }
 
     @Override
     public void onPostFail(String msg) {
+        mProgressDialog.dismiss();
         ToastUtil.show(msg);
+    }
+
+    @Override
+    public void onDestroy() {
+        presenter.cancelAll();
+        super.onDestroy();
     }
 
     /**
@@ -288,7 +301,7 @@ public class TreeBarrierAddFragment extends DemoBaseFragment implements HiddenDa
                 return;
             }
             String lineNames = ((SpinnerOption) lineName.getSelectedItem()).getText();
-            String sDescribe = lineNames + "在" + towerANo + "-" + towerBNo + "杆段内，有" + sType + "数量" + sNum + "颗，距离小号塔" + sTowerDistance + "米，净空距离" + sClearanceDistance + "米";
+            String sDescribe = lineNames + "在" + towerANo + "-" + towerBNo + "杆段内，有" + sType + "数量" + sNum + "棵，距离小号塔" + sTowerDistance + "米，净空距离" + sClearanceDistance + "米";
             describe.setText(sDescribe);
 
             if (StringUtils.isDoubleNull(AppConstant.CURRENT_LOCATION.latitude) || StringUtils.isDoubleNull(AppConstant.CURRENT_LOCATION.longitude)) {
@@ -330,6 +343,7 @@ public class TreeBarrierAddFragment extends DemoBaseFragment implements HiddenDa
                     "确认", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
+                            mProgressDialog.show();
                             presenter.createTreeBarrierDefect(treeBarrierBean, requestImgParts);
                         }
                     }, "取消", new DialogInterface.OnClickListener() {
